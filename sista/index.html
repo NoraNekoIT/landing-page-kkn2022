@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/dist/output.css"> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>SISTA</title>
     <style>
         /* width */
@@ -263,17 +263,17 @@
             // menu.classList.toggle('hidden')
             menu.classList.add('left-0')
             menu.classList.add('w-screen')
-            menu.classList.remove('left-[-screen]')
+            menu.classList.remove('left-[-500px]')
         })
 
         close.addEventListener('click', ()=>{
             // menu.classList.toggle('hidden')
-            menu.classList.add('left-[-screen]')
+            menu.classList.add('left-[-500px]')
             menu.classList.remove('w-screen')
             menu.classList.remove('left-0')
         })
         function close_menu(){
-            menu.classList.add('left-[-screen]')
+            menu.classList.add('left-[-500px]')
             menu.classList.remove('w-screen')
             menu.classList.remove('left-0')
         

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTA -DEMO</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="shortcut icon" href="./img/logo_ukdc_ex.png" type="image/x-icon">
+</head>
+
+<body class="bg-zinc-100">
+    <div class="w-full">
+        <div class="flex justify-between bg-[#002366] rounded-[20px] mx-[30px] my-[25px] items-center">
+            <!-- logo -->
+            <div class="p-[13px] mx-[20px] bg-white rounded-[20px] sm:my-[10px]">
+                <a href="index.html">
+                    <img src="https://ukdc.ac.id/wp-content/uploads/2022/08/UKDC_Logo_Fix-01-1.png" alt="logo_contoh"
+                        width="95" height="auto">
+                </a>
+            </div>
+
+            <!-- menus dekstop-->
+            <div
+                class="hidden justify-center items-center m-[10px] p-[20px] text-[20px] h-full text-white md:flex xl:flex">
+                <div class="mx-4"><a href="index.html#fitur" class="">Fitur</a></div>
+                <div class="mx-4"><a href="index.html#harga" class="">Harga</a></div>
+                <div class="mx-4"><a href="index.html#kontak" class="">Kontak Kami</a></div>
+            </div>
+            <!-- demo -->
+            <div class="hidden my-[10px] mx-[20px] items-center md:block xl:block">
+                <a href="http://if-ukdc.com/sista/demo.html" class="bg-[#f8cb2e] p-[20px] rounded-[20px] font-bold">
+                    <i class="fa-solid fa-bolt mx-2"></i>Demo
+                </a>
+            </div>
+
+            <!-- hamburger icon -->
+            <div class="xl:hidden md:hidden bg-white px-4 py-4 m-3 rounded-[10px]" id="button">
+                <i class="fa-solid fa-bars fa-2xl p-3"></i>
+            </div>
+        </div>
+    </div>
+    <!-- menu mobile -->
+    <div id="menu"
+        class="fixed top-0 bg-[#002366] md:hidden xl:hidden mt-0 left-[-500px] duration-300 z-[999] h-screen p-4 rounded-[10px] ">
+        <div class="">
+            <div class="pt-[10px] pl-[20px]">
+                <div class="flex justify-between items-center flex-row mx-[20px]">
+                    <div class="p-[13px] bg-white rounded-[20px] sm:my-[10px]">
+                        <a href="#" onclick="close_menu()">
+                            <img src="https://ukdc.ac.id/wp-content/uploads/2022/08/UKDC_Logo_Fix-01-1.png"
+                                alt="logo_contoh" width="95" height="auto">
+                        </a>
+                    </div>
+                    <i class="fa-solid fa-xmark fa-2xl bg-white p-[20px] rounded-[10px]" id="close-menu"></i>
+                </div>
+                <div class="text-white mb-[30px]">
+                    <div class="mx-4 my-[25px]"><a href="index.html#fitur" class="" onclick="close_menu()">Fitur</a></div>
+                    <div class="mx-4 my-[25px]"><a href="index.html#harga" class="" onclick="close_menu()">Harga</a></div>
+                    <div class="mx-4 my-[25px]"><a href="index.html#kontak" class="" onclick="close_menu()">Kontak Kami</a>
+                    </div>
+                </div>
+                <a href="demo.html" class="bg-[#f8cb2e] p-[20px] rounded-[20px] font-bold">
+                    <i class="fa-solid fa-bolt mx-2"></i>Demo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- view demo -->
+    <div class="flex flex-row justify-between mx-[20px] items-center">
+        <i class="fa-solid fa-user mx-4 my-[20px] fa-xl p-[20px] cursor-pointer bg-slate-600 text-white rounded-lg drop-shadow-lg"></i>
+        <div>
+            <i class="fa-solid fa-rotate-right mx-4 my-[20px] fa-xl p-[20px] cursor-pointer bg-slate-600 text-white rounded-lg drop-shadow-lg" id="button_reload"></i>
+            <i class="fa-solid fa-maximize mx-4 my-[20px] fa-xl p-[20px] cursor-pointer bg-slate-600 text-white rounded-lg drop-shadow-lg" id="button_fullscreen"></i>
+        </div>
+    </div>
+    <div class="w-full h-screen rounded-lg bg-white drop-shadow-2xl">
+        <iframe src="http://sista.ukdc.ac.id/" class="w-full h-full p-5"
+            title="description" id="view_demo"></iframe>
+    </div>
+
+
+    <!-- footer -->
+    <div class="w-full">
+        <div class="mt-[20px] mb-[30px] mx-[5%] bg-[#002366] rounded-[20px] text-white py-[25px]">
+            <div
+                class="flex xl:flex-row sm:flex-col md:flex-row xs:flex-col 2xs:flex-col sm:text-center justify-between items-center mx-[30px]">
+                <div class="flex flex-row">
+                    <a href="https://www.instagram.com/dc_informatics/" target="_blank" class="py-3 mx-[10px]"><i
+                            class="fa-brands fa-instagram fa-xl"></i></a>
+                    <a href="https://www.youtube.com/@DCInformatics" target="_blank" class="py-3 mx-[10px]"><i
+                            class="fa-brands fa-youtube fa-xl"></i></i></a>
+                    <a href="https://github.com/InformatikaUKDC" target="_blank" class="py-3 mx-[10px]"><i
+                            class="fa-brands fa-github fa-xl"></i></a>
+                </div>
+                <div class="text-center">
+                    &copy; 2023 DC IF Dev
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script icon font awesome -->
+    <script src="https://kit.fontawesome.com/26a7f3b810.js" crossorigin="anonymous"></script>
+    <!-- script menus -->
+    <script type="text/javascript">
+        let button = document.getElementById('button')
+        let menu = document.getElementById('menu')
+        let close = document.getElementById('close-menu')
+        let view_demo = document.getElementById('view_demo')
+        let button_fullscreen = document.getElementById('button_fullscreen')
+        let button_reload = document.getElementById('button_reload')
+
+        button.addEventListener('click', () => {
+            // menu.classList.toggle('hidden')
+            menu.classList.add('left-0')
+            menu.classList.add('w-screen')
+            menu.classList.remove('left-[-500px]')
+        })
+
+        close.addEventListener('click', () => {
+            // menu.classList.toggle('hidden')
+            menu.classList.add('left-[-500px]')
+            menu.classList.remove('w-screen')
+            menu.classList.remove('left-0')
+        })
+
+        // fullscreen view demo
+        button_fullscreen.addEventListener('click', ()=> {
+            if(view_demo.requestFullscreen){
+                view_demo.requestFullscreen()
+            }else if(view_demo.webkitRequestFullScreen){
+                view_demo.webkitRequestFullScreen()
+            }else if(view_demo.msRequestFullScreen){
+                view_demo.msRequestFullScreen()
+            }
+        })
+
+        // reload_iframe
+        button_reload.addEventListener('click', ()=>{
+            view_demo.src = view_demo.src
+        })
+
+        function close_menu() {
+            menu.classList.add('left-[-500px]')
+            menu.classList.remove('w-screen')
+            menu.classList.remove('left-0')
+
+        }
+    </script>
+</body>
+
+</html>

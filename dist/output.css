@@ -533,16 +533,8 @@ video {
   left: 0px;
 }
 
-.left-\[-250px\] {
-  left: -250px;
-}
-
 .left-\[-500px\] {
   left: -500px;
-}
-
-.left-\[-screen\] {
-  left: -screen;
 }
 
 .top-0 {
@@ -551,6 +543,10 @@ video {
 
 .top-2 {
   top: 0.5rem;
+}
+
+.left-\[-\] {
+  left: -;
 }
 
 .z-0 {
@@ -977,6 +973,10 @@ video {
   font-size: 30px;
 }
 
+.text-\[40px\] {
+  font-size: 40px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1079,12 +1079,32 @@ video {
     margin-bottom: 10px;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:w-\[100\%\] {
     width: 100%;
   }
 
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:w-\[\] {
+    width: ;
+  }
+
+  .sm\:w-\[50\] {
+    width: 50;
+  }
+
+  .sm\:w-\[50\%\] {
+    width: 50%;
   }
 
   .sm\:flex-col {
